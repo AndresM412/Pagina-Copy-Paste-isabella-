@@ -3,9 +3,8 @@
 body {
     background-color: #FFD25F; 
     font-family: 'Poppins', sans-serif; 
-    margin: 0; 
+    margin: 0px;
     position: relative;
-    overflow-x: hidden; /
 }
 
 h2 {
@@ -14,18 +13,17 @@ h2 {
 }
 
 .quienes-somos {
-    margin-top: 20vh;
+    margin-top: 20vh; 
     padding-left: 15vh;
-}
 
-.objetivo {
-    margin-top: 0; 
+}
+.objetivo{
+    margin-top: -10vh; 
     padding-left: 135vh;
 }
-
-.que-encontraras {
+.que-encontraras{
     position: relative;
-    top: -30vh; 
+    top: -30vh;
     margin-top: 80vh; 
     padding-left: 15vh;
 }
@@ -34,20 +32,17 @@ p {
     font-size: 3.0vw; 
     color: #333; 
 }
-
-.quienes-somos-p {
+.quienes-somos-p{
     padding-left: 17vh;
     margin-top: -8vh;
 }
-
-.objetivo-p {
+.objetivo-p{
     padding-left: 120vh;
     margin-top: -8vh;
 }
-
-.que-encontraras-p {
+.que-encontraras-p{
     position: relative;
-    top: -80vh; 
+    top: -80vh;
     margin-top: 50vh; 
     padding-left: 15vh;
 }
@@ -57,42 +52,38 @@ p {
     height: 25vw; 
     display: block;
 }
-
 .mano-image {
     position: relative;
     width: 55vw; 
     height: 55vw; 
     float: right; 
     transform: scaleX(-1); 
-    margin-top: -94.5vh; 
+    margin-top: -94.5vh;
     left: 0.2vh;
 }
-
 .tamagochi-image {
     position: relative;
     width: 75vw; 
     height: 75vw; 
     float: left; 
-    margin-top: -90vh; 
+    margin-top: -90vh;
     left: -10vh;
 }
-
 .helado-image {
-    position: absolute;
+    position:absolute;
     width: 50vw; 
     height: 70vw; 
-    right: 1vw; 
-    top: 135vw; 
-}
-
+    right: 1vw;
+    top: 135vw;
+}   
 .boca-image {
-    position: absolute;
+    position:absolute;
     width: 90vw; 
     height: 90vw; 
-    right: 8.9vw; 
+    right: 8.9vw;
     top: 135vw;
-    transform: scaleX(-1); 
-
+    transform: scaleX(-1);
+}
 .puntos-blancos-image {
     position: absolute; 
     top: 0;
@@ -100,39 +91,38 @@ p {
     right: 0;
     bottom: 0;
     background-image: url(../images/home/puntos-blancos-fondo.png); 
-    background-size: cover; 
+    background-size:cover; 
     background-repeat: no-repeat;
     background-position: center; 
     opacity: 0.5; 
     z-index: -1; 
 }
-
-
-@media (max-width: 768px) {
-    body {
-        overflow-x: hidden; 
-    }
-
-    h2 {
-        font-size: 5vw; 
-
-    .quienes-somos,
-    .objetivo,
-    .que-encontraras {
-        margin-top: 10vh; 
-    }
-
-    p {
-        font-size: 4vw; 
-    }
-
-    .header-image,
-    .mano-image,
-    .tamagochi-image,
-    .helado-image,
-    .boca-image {
-        width: 90vw; 
-        height: auto; 
-    }
+.logo-image{
+    position:absolute;
+    height: 6.5vw;
+    width: 6.5vw;
+    right: 91vw;
+    top: 1vw;
+}
+.container {
+    position: absolute;
+    width: 100vw;
+    height: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow:auto; /* Para que no se vea la imagen saliendo del contenedor */
 }
 
+.señor-image {
+    position: absolute;
+    width: 320px; /* Ajusta el tamaño de la imagen si es necesario */
+    transform: translate(80%, -38%)rotate(-20deg); /* Centra la imagen horizontal y verticalmente */
+    animation: moveInS 3s ease-in-out 3; /* 3 repeticiones */
+    z-index: 1;
+}
+
+/* Definir el movimiento en los keyframes */
+@keyframes moveInS {
+    0% {
+        transform: translate(0, 0); /* Punto de partida */
