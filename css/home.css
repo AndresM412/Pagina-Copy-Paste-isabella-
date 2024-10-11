@@ -3,8 +3,9 @@
 body {
     background-color: #FFD25F; /* Color de fondo amarillo claro */
     font-family: 'Poppins', sans-serif; /* Tipografía Poppins para todo el contenido */
-    margin: 0px;/* Elimina márgenes predeterminados */
+    margin: 0; /* Elimina márgenes predeterminados */
     position: relative;
+    overflow-x: hidden; /* Evita el desbordamiento horizontal */
 }
 
 h2 {
@@ -15,15 +16,16 @@ h2 {
 .quienes-somos {
     margin-top: 20vh; /* Ajusta la posición específica para el primer título */
     padding-left: 15vh;
-
 }
-.objetivo{
-    margin-top: -10vh; /* Ajusta la posición específica para el primer título */
+
+.objetivo {
+    margin-top: 0; /* Mantiene la posición original */
     padding-left: 135vh;
 }
-.que-encontraras{
+
+.que-encontraras {
     position: relative;
-    top: -30vh;
+    top: -30vh; /* Mantiene la posición original */
     margin-top: 80vh; /* Ajusta la posición específica para el primer título */
     padding-left: 15vh;
 }
@@ -32,17 +34,20 @@ p {
     font-size: 3.0vw; /* Tamaño de texto legible */
     color: #333; /* Color oscuro para el texto */
 }
-.quienes-somos-p{
+
+.quienes-somos-p {
     padding-left: 17vh;
     margin-top: -8vh;
 }
-.objetivo-p{
+
+.objetivo-p {
     padding-left: 120vh;
     margin-top: -8vh;
 }
-.que-encontraras-p{
+
+.que-encontraras-p {
     position: relative;
-    top: -80vh;
+    top: -80vh; /* Mantiene la posición original */
     margin-top: 50vh; /* Ajusta la posición específica para el primer título */
     padding-left: 15vh;
 }
@@ -52,38 +57,43 @@ p {
     height: 25vw; /* Mantiene la proporción */
     display: block;
 }
+
 .mano-image {
     position: relative;
     width: 55vw; /* Mantiene el ancho automático */
     height: 55vw; /* Mantiene la proporción */
     float: right; /* Cambia a 'left' si quieres que esté a la izquierda */
     transform: scaleX(-1); /* Invierte horizontalmente la imagen */
-    margin-top: -94.5vh;
+    margin-top: -94.5vh; /* Mantiene la posición original */
     left: 0.2vh;
 }
+
 .tamagochi-image {
     position: relative;
     width: 75vw; /* Mantiene el ancho automático */
     height: 75vw; /* Mantiene la proporción */
     float: left; /* Cambia a 'left' si quieres que esté a la izquierda */
-    margin-top: -90vh;
+    margin-top: -90vh; /* Mantiene la posición original */
     left: -10vh;
 }
+
 .helado-image {
-    position:absolute;
+    position: absolute;
     width: 50vw; /* Mantiene el ancho automático */
     height: 70vw; /* Mantiene la proporción */
-    right: 1vw;
-    top: 135vw;
-}   
+    right: 1vw; /* Ajusta según sea necesario */
+    top: 135vw; /* Mantiene la posición original */
+}
+
 .boca-image {
-    position:absolute;
+    position: absolute;
     width: 90vw; /* Mantiene el ancho automático */
     height: 90vw; /* Mantiene la proporción */
-    right: 8.9vw;
-    top: 135vw;
-    transform: scaleX(-1);
+    right: 8.9vw; /* Ajusta según sea necesario */
+    top: 135vw; /* Mantiene la posición original */
+    transform: scaleX(-1); /* Invierte horizontalmente la imagen */
 }
+
 .puntos-blancos-image {
     position: absolute; /* Coloca la imagen en la parte superior */
     top: 0;
@@ -91,9 +101,40 @@ p {
     right: 0;
     bottom: 0;
     background-image: url(../images/home/puntos-blancos-fondo.png); /* Cambia la ruta a tu imagen */
-    background-size:cover; /* O 'contain', según lo que desees */
+    background-size: cover; /* O 'contain', según lo que desees */
     background-repeat: no-repeat;
     background-position: center; /* Centra la imagen */
     opacity: 0.5; /* Ajusta la opacidad de la imagen */
     z-index: -1; /* Asegúrate de que esté detrás del contenido */
 }
+
+/* Media Queries para mantener el diseño en pantallas más pequeñas */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden; /* Mantener el desbordamiento oculto */
+    }
+
+    h2 {
+        font-size: 5vw; /* Ajuste del tamaño del título para pantallas pequeñas */
+    }
+
+    .quienes-somos,
+    .objetivo,
+    .que-encontraras {
+        margin-top: 10vh; /* Ajustes para mayor comodidad en pantallas pequeñas */
+    }
+
+    p {
+        font-size: 4vw; /* Aumentar tamaño del texto para mejor legibilidad */
+    }
+
+    .header-image,
+    .mano-image,
+    .tamagochi-image,
+    .helado-image,
+    .boca-image {
+        width: 90vw; /* Mantener las imágenes responsivas */
+        height: auto; /* Mantener proporción */
+    }
+}
+
