@@ -1,8 +1,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
-    font-family: 'Roboto', sans-serif; /* Tipografía Roboto para el cuerpo */
-    /* Otros estilos para el fondo y márgenes que necesites */
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFE9B3; /* Fondo de color FFE9B3 */
+    margin: 0;
+    padding: 0;
+    position: relative;
 }
 
-/* Aquí puedes añadir más estilos específicos para las otras vistas */
+body::before {
+    content: '';
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/home/puntos-blancos-fondo.png'); /* Imagen de fondo */
+    background-size: cover; /* Hace que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
+    opacity: 0.49; /* Aplica la opacidad al 49% */
+    z-index: -1; /* Envía el fondo detrás del contenido */
+}
+
+.container {
+    position: relative; /* Mantiene los elementos por encima del fondo */
+    z-index: 1; /* Coloca el contenido por encima del fondo */
+}
+.header-container {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 14%;
+    margin: -17%;
+}
+
+.header-image {
+    margin-left: auto; /* Empuja la imagen hacia la derecha */
+    max-width: 105%; /* Limita el ancho máximo para mantener la responsividad */
+    height: auto; /* Mantiene la relación de aspecto */
+}
+
+
+.image-frame {
+    position: relative;
+    border: 5px solid #FFC176; /* Color del marco */
+    border-radius: 83px; /* Bordes redondeados */
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    margin-bottom: 20px; /* Espacio entre las imágenes */
+}
+
+.image-frame {
+    border: 4px solid #FFC176;
+    border-radius: 100px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.image-caption {
+    position: relative;
+    bottom: 19.9%;
+    width: 99.99%;
+    background-color: rgba(255, 193, 118, 0.8);
+    color: black;
+    font-size: 2.5vw;
+    padding: 2.5vw 0px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.image-caption span {
+    margin-left: 4%; /* Se mantiene como porcentaje para adaptarse */
+    font-weight: 700; 
+}
+

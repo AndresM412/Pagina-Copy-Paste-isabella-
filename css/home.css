@@ -1,8 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+.row {
+    height: 1200px; /* Ajusta la altura al contenido */
+}
+.container-fluid {
+    height: 100%; /* Asegura que el contenido ocupe el 100% del espacio disponible */
+    position: relative;
+    z-index: 1; /* Pone el contenido por encima del fondo */
+}
 body {
     background-color: #FFD25F; 
-    font-family: 'Poppins', sans-serif; 
+    font-family: 'Poppins', 'sans-serif'; 
     margin: 0px;
     position: relative;
 }
@@ -10,119 +18,256 @@ body {
 h2 {
     font-size: 4.0vw; 
     color: #333; 
-}
-
-.quienes-somos {
-    margin-top: 20vh; 
-    padding-left: 15vh;
-
-}
-.objetivo{
-    margin-top: -10vh; 
-    padding-left: 135vh;
-}
-.que-encontraras{
-    position: relative;
-    top: -30vh;
-    margin-top: 80vh; 
-    padding-left: 15vh;
+    font-weight: 600;
 }
 
 p {
-    font-size: 3.0vw; 
+    font-size: 3.0rem; 
     color: #333; 
 }
-.quienes-somos-p{
-    padding-left: 17vh;
-    margin-top: -8vh;
+.menu-image {
+    position: absolute;
+    width: 7%;
+    height: auto;
+    top: 1vw;
+    left: 87vw;
 }
-.objetivo-p{
-    padding-left: 120vh;
-    margin-top: -8vh;
-}
-.que-encontraras-p{
-    position: relative;
-    top: -80vh;
-    margin-top: 50vh; 
-    padding-left: 15vh;
-}
-
 .header-image {
-    width: 99vw; 
-    height: 25vw; 
-    display: block;
-}
-.mano-image {
-    position: relative;
-    width: 55vw; 
-    height: 55vw; 
-    float: right; 
-    transform: scaleX(-1); 
-    margin-top: -94.5vh;
-    left: 0.2vh;
-}
-.tamagochi-image {
-    position: relative;
-    width: 75vw; 
-    height: 75vw; 
-    float: left; 
-    margin-top: -90vh;
-    left: -10vh;
-}
-.helado-image {
-    position:absolute;
-    width: 50vw; 
-    height: 70vw; 
-    right: 1vw;
-    top: 135vw;
-}   
-.boca-image {
-    position:absolute;
-    width: 90vw; 
-    height: 90vw; 
-    right: 8.9vw;
-    top: 135vw;
-    transform: scaleX(-1);
-}
-.puntos-blancos-image {
-    position: absolute; 
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url(../images/home/puntos-blancos-fondo.png); 
-    background-size:cover; 
-    background-repeat: no-repeat;
-    background-position: center; 
-    opacity: 0.5; 
-    z-index: -1; 
+    width: 100%;
+    height: 50vh;
 }
 .logo-image{
     position:absolute;
-    height: 6.5vw;
-    width: 6.5vw;
-    right: 91vw;
+    height: 4%;
+    width: auto;
+    left: 5vw;
     top: 1vw;
 }
-.container {
-    position: absolute;
-    width: 100vw;
-    height: 80vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow:auto; /* Para que no se vea la imagen saliendo del contenedor */
+
+.quienes-somos { 
+    position: relative;
+    padding-left: 8vw;
+    top: -45vw;
+}
+.quienes-somos-p{
+    max-width: 50vw;
+    position: relative;
+    padding-left: 8vw;
+    top: -45vw;
+}
+.mano-image {
+    position: relative;
+    width: 50%;
+    right: -49.5vw;
+    transform: scaleX(-1); 
+}
+.señor-image { 
+    position: relative;
+    right: 11vw;
+    top: 10vw;
+    width: 30%;
+    transform: translate(80%, -38%)rotate(-20deg); 
+} 
+.objetivo{
+    position: relative;
+    padding-left: 15vw;
+    padding-top: 10vw;
 }
 
-.señor-image {
-    position: absolute;
-    width: 320px; /* Ajusta el tamaño de la imagen si es necesario */
-    transform: translate(80%, -38%)rotate(-20deg); /* Centra la imagen horizontal y verticalmente */
-    animation: moveInS 3s ease-in-out 3; /* 3 repeticiones */
-    z-index: 1;
+.objetivo-p{
+    position: relative;
+    max-width: 50vw;
+    padding-left: 7vw;
+}
+
+.tamagochi-image {
+    position: relative;
+    width: 100%;
+    transform: scale(1.5); 
+    left: 7vw;
+    top: 18vw;
+
+}
+.que-encontraras{
+    position: relative;
+    padding-left: 8vw;
+    top: -10vw;
+}
+
+.que-encontraras-p{
+    position: relative;
+    padding-left: 8vw;
+    top: -10vw;
+}
+
+.helado-image {
+    position:relative;
+    width: 90%; 
+    height: auto;
+    left: 2vw;
+    top: -5vw;
+    
+}   
+.boca-image {
+    position: absolute; /* Permite que la imagen no afecte el flujo del documento */
+    left: 12vw;
+    top: 10vw; /* Ajusta la posición vertical */
+    transform: scaleX(-1) scale(1.5);
+    z-index: 1; /* Asegura que la imagen esté por encima del contenido */
+    width: 100%;
+}
+.puntos-blancos-image {
+    position: absolute; /* Fija la imagen de fondo para que siempre cubra la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Cubre todo el espacio de la página */
+    background-image: url(../images/home/puntos-blancos-fondo.png); 
+    background-size: cover; /* Asegura que el fondo cubra todo el contenedor */
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.5; 
+    z-index: -1; /* Mantén la imagen detrás del contenido */
 }
 
 /* Definir el movimiento en los keyframes */
-@keyframes moveInS {
+@keyframes mover-imagen {
     0% {
-        transform: translate(0, 0); /* Punto de partida */
+      transform: translateX(0); /* Posición inicial */
+    }
+    50% {
+      transform: translateX(100px-100px); /* Posición a la mitad de la animación */
+    }
+    100% {
+      transform: translateX(0); /* Regresa a la posición inicial */
+    }
+  }
+
+
+/* DIMENSIONES */
+@media (min-width: 320px) and (max-width: 500px) { /* PARA PANTALLAS MUY PEQUEÑAS A PEQUEÑAS (MÓVILES) */
+    .row {
+        height: 525px; /* Ajusta la altura al contenido */
+    }
+    .header-image {
+        height: 24vh; /* Ajusta el tamaño del header para pantallas pequeñas */
+    }
+    
+    .logo-image {
+        top: 4vw; /* Mueve el logo hacia abajo */
+        left: 4vw;
+        width: 9vw; /* Aumenta el tamaño del logo */
+        height: auto;
+    }
+    h2 {
+        font-size: 4.0vw; /* Aumenta ligeramente el tamaño del h2 para pantallas pequeñas */
+        color: #333; 
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 0.7rem; /* Mantiene el tamaño del párrafo */
+        color: #333;
+    }
+
+    .quienes-somos { 
+        position: relative;
+        padding-left: 9vw; /* Reduce el padding izquierdo */
+        top: -41vw; /* Reduce el margen superior */
+    }
+
+    .quienes-somos-p {
+        position: relative;
+        left: 2vw; /* Reduce el margen izquierdo */
+        top: -43vw; /* Reduce el margen superior */
+        max-width: 55vw;
+    }
+
+    .mano-image {
+        position: relative;
+        width: 50%; /* Mantiene el ancho al 100% */
+        right: -49,5vw; /* Quita el desplazamiento hacia la derecha */
+        transform: scaleX(-1); 
+    }
+
+    .señor-image {
+        position: relative;
+        right: 13vw; /* Ajusta la posición horizontal */
+        top: 7vw; /* Ajusta la posición vertical */
+        width: 40%; /* Aumenta el tamaño para que sea más visible */
+        transform: translate(50%, -20%) rotate(-20deg); /* Ajusta la centración */
+    }
+
+    .objetivo {
+        position: relative;
+        padding-left: 14vw; /* Reduce el padding izquierdo */
+        padding-top: 1vw; /* Mantiene el margen superior */
+    }
+
+    .objetivo-p {
+        position: relative;
+        padding-left: 11vw; /* Reduce el padding izquierdo */
+    }
+
+    .tamagochi-image {
+        position: relative;
+        width: 100%; /* Mantiene el ancho al 100% */
+        transform: scale(1.5); /* Reduce la escala */
+        left: 5vw; /* Ajusta la posición horizontal */
+        top: 5vw; /* Ajusta la posición vertical */
+    }
+
+    .que-encontraras {
+        position: relative;
+        padding-left: 5vw; /* Reduce el padding izquierdo */
+        top: -45vw; /* Mantiene el margen superior */
+        margin: 0;
+    }
+
+    .que-encontraras-p {
+        position: relative;
+        padding-left: 5vw; /* Reduce el padding izquierdo */
+        top: -45vw;
+        margin: 0;
+    }
+
+    .helado-image {
+        position: relative;
+        width: 90%; /* Mantiene el ancho al 90% */
+        height: auto;
+        left: 2vw; /* Ajusta la posición horizontal */
+        top: -43vw; /* Reduce el margen superior */
+    }
+
+    .boca-image {
+        position: relative; /* Permite que la imagen no afecte el flujo del documento */
+        left: 6vw; /* Ajusta la posición horizontal */
+        top: -68vw; /* Ajusta la posición vertical */
+        transform: scaleX(-1) scale(1.5); /* Voltea la imagen y la escala */
+        max-height: none; /* Evita restricciones de altura */
+        max-width: 100%; /* Evita restricciones de ancho */
+        z-index: 1; /* Asegura que la imagen esté por encima del contenido */
+    }
+
+    .puntos-blancos-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Asegura que cubra todo el contenedor */
+        z-index: -1; /* Envía la imagen al fondo */
+    }
+}
+@media (min-width: 540px) and (max-width: 800px) { /* PARA PANTALLAS PEQUEÑAS A MEDIANAS (TABLETS) */
+    .header-image {
+        height: 30vh; /* Ajusta el tamaño del header para pantallas medianas */
+    }
+    
+    .logo-image {
+        top: 2vw; /* Mueve el logo hacia abajo */
+        left: 5vw;
+        width: 8vw; /* Aumenta el tamaño del logo */
+        height: auto;
+    }
+}

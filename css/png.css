@@ -1,0 +1,24 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFE9B3; /* Fondo de color FFE9B3 */
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+.header-container {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 14%;
+    margin: -17%;
+}
+
+.header-image {
+    margin-left: auto; /* Empuja la imagen hacia la derecha */
+    max-width: 105%; /* Limita el ancho máximo para mantener la responsividad */
+    height: auto; /* Mantiene la relación de aspecto */
+}
+.text-container {
+    background-color: #D9D9D9; /* Color de fondo del rectángulo */
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center; /* Centra el texto */
+}
