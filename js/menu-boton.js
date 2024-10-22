@@ -7,4 +7,3 @@ function toggleMenu() {
     const subMenu = document.getElementById("sub-menu");
     subMenu.classList.toggle("hidden");
   }
-  

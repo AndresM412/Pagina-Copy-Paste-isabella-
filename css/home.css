@@ -136,7 +136,7 @@ p {
       transform: translateX(0); /* Posición inicial */
     }
     50% {
-      transform: translateX(100px-100px); /* Posición a la mitad de la animación */
+      transform: translateX(100px); /* Posición a la mitad de la animación */
     }
     100% {
       transform: translateX(0); /* Regresa a la posición inicial */
