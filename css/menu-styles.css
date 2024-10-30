@@ -1,0 +1,66 @@
+/* Estilo del contenedor del menú */
+.menu-container {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.menu-icon {
+    width: 40px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Menú desplegable oculto por defecto */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    width: 150px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    animation: slideDown 0.3s ease forwards;
+}
+
+/* Opciones del menú */
+.dropdown-item {
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* Animación de deslizamiento */
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Mostrar el menú */
+.show-menu {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+

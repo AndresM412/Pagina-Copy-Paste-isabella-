@@ -5,6 +5,7 @@ body {
     background-color: #FFE9B3; /* Fondo de color FFE9B3 */
     margin: 0;
     padding: 0;
+    z-index: 1;
     position: relative;
 }
 
@@ -22,55 +23,84 @@ body::before {
     z-index: -1; /* Envía el fondo detrás del contenido */
 }
 
-.container {
-    position: relative; /* Mantiene los elementos por encima del fondo */
-    z-index: 1; /* Coloca el contenido por encima del fondo */
+.mt-5, .my-5 {
+    margin-top: -25rem !important;
 }
+.mb-4, .my-4 {
+    margin-bottom: 4.5rem !important;
+}
+
 .header-container {
-    display: flex;
-    justify-content: flex-start;
-    padding-left: 14%;
-    margin: -17%;
+    position: relative; /* Permite posicionar elementos de manera absoluta dentro del contenedor */
+    overflow: hidden;
 }
 
 .header-image {
-    margin-left: auto; /* Empuja la imagen hacia la derecha */
-    max-width: 105%; /* Limita el ancho máximo para mantener la responsividad */
-    height: auto; /* Mantiene la relación de aspecto */
+    transform: translate(10%, -26%); /* Centra la imagen dentro del contenedor */
+    width: 100%; /* Tamaño de la imagen, ajustable */
+    max-width: 100%;
+    height: auto;
 }
-
-
-.image-frame {
-    position: relative;
-    border: 5px solid #FFC176; /* Color del marco */
-    border-radius: 83px; /* Bordes redondeados */
-    width: 100%; /* Asegura que ocupe todo el ancho disponible */
-    margin-bottom: 20px; /* Espacio entre las imágenes */
-}
-
-.image-frame {
-    border: 4px solid #FFC176;
-    border-radius: 100px;
+.text-box {
     width: 100%;
-    margin-bottom: 20px;
+    background-color: #E2E2E2; /* Color del fondo del recuadro */
+    text-align: center;
+    padding: 25px 15px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    font-size: 1.2rem; /* Tamaño del texto */
+    margin-top: -350px;
+}
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: transparent;
+    background-clip: border-box;
+    border: 1px transparent;
+    border-radius: 5.25rem;  
+    transition: border 0.3s ease; /* Transición suave del borde */
+    cursor: pointer;
+}
+.card:hover {
+    border: 6px solid #FFC176; /* Aumenta el grosor del borde y cambia el color cuando haces hover */
+}
+.image-container {
+    position: relative;
+    border-radius: 65px; /* Bordes redondeados */
+    overflow: hidden; /* Para que el contenido no se salga de los bordes redondeados */
+    width: 100%;
+    height: 375px; /* Ajusta la altura para que todas las imágenes tengan el mismo tamaño */
+    background-color: transparent;
 }
 
-.image-caption {
-    position: relative;
-    bottom: 19.9%;
-    width: 99.99%;
-    background-color: rgba(255, 193, 118, 0.8);
-    color: black;
-    font-size: 2.5vw;
-    padding: 2.5vw 0px;
-    border-bottom-left-radius: 100px;
-    border-bottom-right-radius: 100px;
-    text-align: left;
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen se ajuste sin perder proporción */
+    border-radius: 15px; /* Redondea la imagen */
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 193, 118, 0.7); /* Fondo semicircular */
+    padding: 30px;
+    border-bottom-left-radius: 15px; /* Bordes semicirculares inferiores */
+    border-bottom-right-radius: 15px;
+
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+.card-title {
+    margin: 0;
+    font-size: 1.2rem;
     font-weight: bold;
 }
-
-.image-caption span {
-    margin-left: 4%; /* Se mantiene como porcentaje para adaptarse */
-    font-weight: 700; 
-}
-
