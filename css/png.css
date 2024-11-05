@@ -28,7 +28,7 @@ body::before {
 }
 
 .header-image {
-    transform: translate(10%, -10%); /* Centra la imagen dentro del contenedor */
+    transform: translate(10%, -20%); /* Centra la imagen dentro del contenedor */
     width: 100%; /* Tamaño de la imagen, ajustable */
     max-width: 100%;
     height: auto;
@@ -41,7 +41,7 @@ body::before {
     border-radius: 5px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
     font-size: 1.2rem; /* Tamaño del texto */
-    margin-top: -350px;
+    margin-top: -450px;
 }
 .card {
     position: relative;

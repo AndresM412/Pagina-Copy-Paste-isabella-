@@ -1,17 +1,17 @@
-/* Estilo del contenedor del menú */
 .menu-container {
     position: relative;
     display: inline-block;
     margin-top: 20px;
+    z-index: 1000;
+    transform: translate(1350px,30px);
 }
 
 .menu-icon {
-    width: 40px;
+    width: 10px;
     height: auto;
     cursor: pointer;
 }
 
-/* Menú desplegable oculto por defecto */
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -21,11 +21,11 @@
     width: 150px;
     border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
+    overflow: hidden; /* Asegúrate de que esté oculto el overflow */
     animation: slideDown 0.3s ease forwards;
 }
 
-/* Opciones del menú */
+
 .dropdown-item {
     padding: 10px;
     color: #333;
@@ -37,7 +37,6 @@
     background-color: #f0f0f0;
 }
 
-/* Animación de deslizamiento */
 @keyframes slideDown {
     from {
         transform: translateY(-20px);
@@ -49,10 +48,10 @@
     }
 }
 
-/* Mostrar el menú */
 .show-menu {
     display: block;
 }
+
 
 
 

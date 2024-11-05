@@ -116,6 +116,21 @@ p {
     z-index: 1; /* Asegura que la imagen esté por encima del contenido */
     width: 100%;
 }
+.boton-recursos {
+    background-color: #FFC176; /* Color solicitado */
+    color: #333;
+    font-weight: 600;
+    border: none;
+    padding: 30px 44px; /* Aumenta el espacio interno */
+    font-size: 30px; /* Aumenta el tamaño del texto */
+    border-radius: 30px; /* Bordes redondeados opcionales */
+  }
+  
+  .boton-recursos:hover {
+    border: 3px solid #070706;
+    background-color: #D9955A; /* Color opcional para el hover */
+  }
+  
 .puntos-blancos-image {
     position: absolute; /* Fija la imagen de fondo para que siempre cubra la pantalla */
     top: 0;
@@ -258,6 +273,7 @@ p {
         object-fit: cover; /* Asegura que cubra todo el contenedor */
         z-index: -1; /* Envía la imagen al fondo */
     }
+    
 }
 @media (min-width: 540px) and (max-width: 800px) { /* PARA PANTALLAS PEQUEÑAS A MEDIANAS (TABLETS) */
     .header-image {

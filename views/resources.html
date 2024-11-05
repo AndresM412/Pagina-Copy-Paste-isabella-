@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/resources.css"> <!-- Tu CSS personalizado -->
-
 </head>
 <body>
     <!-- Header Section -->
@@ -14,11 +14,13 @@
             <img src="../images/resources/titulo-recursos.png" alt="Header Image" class="header-image img-fluid"> <!-- Imagen PNG -->
         </div>
     </header>    
+    
     <!-- Image Section -->
     <section class="container my-5">
-        <!-- Fila 1 -->
+        <!-- Fila única con tres columnas responsivas -->
         <div class="row mb-4">
-            <div class="col-12">
+            <!-- Columna 1: PNG -->
+            <div class="col-12 col-md-4 mb-4">
                 <div class="card text-center">
                     <div class="image-container">
                         <a href="../views/png.html" target="_blank">
@@ -30,24 +32,28 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row mb-4">
-            <div class="col-12">
+            
+            <!-- Columna 2: JPG -->
+            <div class="col-12 col-md-4 mb-4">
                 <div class="card text-center">
                     <div class="image-container">
-                        <img src="../images/resources/gatico-oveja.jpg" class="card-img-top" alt="PNG 01">
+                        <a href="../views/jpg.html" target="_blank">
+                            <img src="../images/resources/gatico-oveja.jpg" class="card-img-top" alt="JPG 01">
+                        </a>
                         <div class="overlay">
                             <h5 class="card-title">JPG</h5>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row mb-4">
-            <div class="col-12">
+            
+            <!-- Columna 3: GIFTS -->
+            <div class="col-12 col-md-4 mb-4">
                 <div class="card text-center">
                     <div class="image-container">
-                        <img src="../images/resources/café.png" class="card-img-top" alt="PNG 01">
+                        <a href="../views/gifts.html" target="_blank">
+                            <img src="../images/resources/café.png" class="card-img-top" alt="GIFTS">
+                        </a>
                         <div class="overlay">
                             <h5 class="card-title">GIFTS</h5>
                         </div>
@@ -56,7 +62,11 @@
             </div>
         </div>           
     </section>
-    
 
+    <!-- Bootstrap JS y Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
