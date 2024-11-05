@@ -66,8 +66,22 @@ p {
     right: 11vw;
     top: 10vw;
     width: 30%;
-    transform: translate(80%, -38%)rotate(-20deg); 
-} 
+    transform: translate(80%, -38%)rotate(-20deg);
+    animation: mover-señor 10s ease-in-out;
+    animation-timing-function: cubic-bezier(0,0,1,1);
+    animation-iteration-count: 3;
+}
+@keyframes mover-señor{
+    30% {
+        transform: translate(-500px, 800px)rotate(-80deg); /* Movimiento a la posición final en forma de S */
+    }
+    60%{
+        transform: translate(500px,1900px)rotate(10deg);
+    }
+    100%{
+        transform: translate(-500px,2500px)rotate(-60deg); 
+    }
+}
 .objetivo{
     position: relative;
     padding-left: 15vw;
