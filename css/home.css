@@ -34,7 +34,7 @@ p {
 }
 .header-image {
     width: 100%;
-    height: 50vh;
+    height: 25%;
 }
 .logo-image{
     position:absolute;
@@ -79,7 +79,7 @@ p {
         transform: translate(500px,1900px)rotate(10deg);
     }
     100%{
-        transform: translate(-500px,2500px)rotate(-60deg); 
+        transform: translate(-900px,2250px)rotate(-60deg); 
     }
 }
 .objetivo{
@@ -158,20 +158,6 @@ p {
     opacity: 0.5; 
     z-index: -1; /* Mantén la imagen detrás del contenido */
 }
-
-/* Definir el movimiento en los keyframes */
-@keyframes mover-imagen {
-    0% {
-      transform: translateX(0); /* Posición inicial */
-    }
-    50% {
-      transform: translateX(100px); /* Posición a la mitad de la animación */
-    }
-    100% {
-      transform: translateX(0); /* Regresa a la posición inicial */
-    }
-  }
-
 
 /* DIMENSIONES */
 @media (min-width: 320px) and (max-width: 500px) { /* PARA PANTALLAS MUY PEQUEÑAS A PEQUEÑAS (MÓVILES) */

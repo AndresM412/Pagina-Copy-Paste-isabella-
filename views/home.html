@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="../css/home.css"> <!-- Tu CSS personalizado -->
+  <link rel="stylesheet" href="../css/menu-styles.css">
   
 </head>
 <body>
@@ -14,6 +15,21 @@
     <div class="row">
       <!-- Imagen del encabezado -->
       <div class="col-12 p-0">
+        <div id="menu-placeholder"></div>
+
+        <script src="../js/menu-boton.js"></script>
+        <script>
+            // Cargar el menú dinámicamente
+            fetch('../components/menu-component.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('menu-placeholder').innerHTML = html;
+        
+                    // Llamar a la función de inicialización del menú
+                    initializeMenu();
+                })
+                .catch(error => console.error('Error cargando el menú:', error));
+        </script>
         <img src="../images/home/portada-paginaweb.jpg" alt="portada" class="header-image img-fluid w-100">
         <img src="../images/home/logo-collage.png" alt="logo" class="logo-image">
         <img src="../images/home/mano.png" alt="mano" class="mano-image img-fluid">
